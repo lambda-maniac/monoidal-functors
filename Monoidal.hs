@@ -15,3 +15,4 @@ instance Monoidal ((->) r) where
 
     (<^>) :: (r -> a) -> (r -> b) -> r -> (a, b)
     (<^>) ra rb r = ((ra r), (rb r))
+    -- (<^>) Could be defined as (&&&) from Control.Arrow, as it is the tensor product in the arrow category.
